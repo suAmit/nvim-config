@@ -54,10 +54,17 @@ return {
         path_display = { "smart" },
         mappings = {
           i = {
+            ["<esc>"] = actions.close,
+            ["<C-u>"] = false,
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-j>"] = actions.move_selection_next,
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
             ["<C-d>"] = actions.delete_buffer,
+            ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+            ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+            ["<C-x>"] = actions.select_horizontal,
+            ["<C-v>"] = actions.select_vertical,
+            ["<C-t>"] = actions.select_tab,
           },
         },
       },
