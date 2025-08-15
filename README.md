@@ -2,7 +2,10 @@
 
 Requirement
 
-- npm
-- clang
-- ripgrep
-- make
+```
+npm
+clang
+ripgrep
+make
+fzf
+```
