@@ -16,6 +16,18 @@ return {
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+    -- Default diagnostic config applied globally
+    vim.diagnostic.config({
+      virtual_text = {
+        prefix = '■',
+        spacing = 2,
+      },
+      signs = true,
+      underline = true,
+      update_in_insert = false,
+      severity_sort = true,
+    })
+
     local keymap = vim.keymap -- for conciseness
 
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -58,6 +70,14 @@ return {
 
         opts.desc = "Go to next diagnostic"
         keymap.set("n", "<leader>zn", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+
+        opts.desc = "Toggle inline diagnostics"
+        keymap.set("n", "<leader>zd", function()
+          local current = vim.diagnostic.config().virtual_text
+          local new_value = not (type(current) == "table" or current)
+          vim.diagnostic.config({ virtual_text = new_value })
+          vim.notify("Inline diagnostics: " .. (new_value and "ON" or "OFF"), vim.log.levels.INFO)
+        end, opts) -- toggle diagnostics inline
 
         opts.desc = "Show documentation for what is under cursor"
         keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
