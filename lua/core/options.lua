@@ -52,7 +52,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.swapfile = false
 
 -- Persistent undo setup
-local undo_dir = vim.fn.stdpath("config") .. "/undo"
+local undo_dir = vim.fn.stdpath("data") .. "/undo"
 if vim.fn.isdirectory(undo_dir) == 0 then
   vim.fn.mkdir(undo_dir, "p")
 end
