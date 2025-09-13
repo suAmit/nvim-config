@@ -74,12 +74,12 @@ return {
       items = {
         function()
           if require("auto-session").session_exists_for_cwd() then
-            return { section = "Sessions", name = "Restore last session", action = [[SessionRestore]] }
+            return { section = "Sessions", name = "Restore last session", action = [[AutoSession restore]] }
           end
         end,
         function()
           if require("auto-session").session_exists_for_cwd() then
-            return { section = "Sessions", name = "Delete last session", action = [[SessionDelete]] }
+            return { section = "Sessions", name = "Delete last session", action = [[AutoSession delete]] }
           end
         end,
 

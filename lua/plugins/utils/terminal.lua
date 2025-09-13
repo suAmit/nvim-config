@@ -3,13 +3,6 @@ return {
   keys = {
     {"<A-\\>"},
     {
-      "<leader>lg",
-      function()
-        gh_dash:toggle()
-      end,
-      desc = "ToggleTerm: Toggle github dashboard",
-    },
-    {
       "<leader>lh",
       "<cmd>:ToggleTerm size=math.floor(vim.o.lines * 0.3) dir=~/Desktop direction=horizontal name=desktop<CR>",
       desc = "ToggleTerm horizontal split",
