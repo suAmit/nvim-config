@@ -25,8 +25,8 @@ return {
     { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Buffer diagnostics" },
 
     -- Buffers
-    { "<leader>bb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
-    { "<leader>,",  "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Switch buffer" },
+    { "<leader>bb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers List" },
+    { "<leader>,",  "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers List" },
 
     -- Git
     { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "Git status" },
@@ -65,6 +65,7 @@ return {
             ["<C-x>"] = actions.select_horizontal,
             ["<C-v>"] = actions.select_vertical,
             ["<C-t>"] = actions.select_tab,
+            ["<C-s>"] = actions.toggle_preview,
           },
         },
       },

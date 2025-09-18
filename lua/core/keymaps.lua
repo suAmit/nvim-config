@@ -7,12 +7,14 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode" })
 
 -- Buffer navigation
-keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Go to next buffer" })
-keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Go to previous buffer" })
-keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete current buffer" })
+keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Go to next buffer", silent = true })
+keymap.set("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "Go to previous buffer", silent = true })
+keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete current buffer", silent = true })
+keymap.set("n", "L", "<cmd>bnext<CR>", { desc = "Next buffer", silent = true })
+keymap.set("n", "H", "<cmd>bprevious<CR>", { desc = "Previous buffer", silent = true })
 
 -- Clear search highlights
-keymap.set("n", "nh", ":nohlsearch<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "nh", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- Delete single character without copying
 keymap.set("n", "x", '"_x', { desc = "Delete character without copying" })
