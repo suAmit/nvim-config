@@ -65,7 +65,7 @@ return {
             ["<C-x>"] = actions.select_horizontal,
             ["<C-v>"] = actions.select_vertical,
             ["<C-t>"] = actions.select_tab,
-            ["<C-s>"] = actions.toggle_preview,
+            ["<C-s>"] = require("telescope.actions.layout").toggle_preview, -- 🔧 Fix applied here
           },
         },
       },
