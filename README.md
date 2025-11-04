@@ -2,10 +2,6 @@
 
 Requirement
 
-```
-npm
-clang
-ripgrep
-make
-fzf
+```bash
+npm clang ripgrep make fzf
 ```
