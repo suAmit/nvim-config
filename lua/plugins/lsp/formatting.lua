@@ -6,7 +6,7 @@ return {
     local lang_list = require("plugins.custom.lang")
 
     conform.setup({
-      formatters_by_ft = lang_list.language.formetter,
+      formatters_by_ft = lang_list.language.formatter,
       format_on_save = {
         lsp_fallback = true,
         async = false,

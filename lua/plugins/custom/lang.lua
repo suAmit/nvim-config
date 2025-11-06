@@ -8,6 +8,7 @@ return {
         "javascript",
         "typescript",
         "tsx",
+        "go",
         "yaml",
         "html",
         "css",
@@ -28,11 +29,13 @@ return {
       mason_tool = {
         "prettier",
         "eslint_d",
+        "isort",
+        "black"
         -- "stylua"
       },
     },
     -- ../lsp/formatting.lua
-    formetter = {
+    formatter = {
       javascript = { "prettier" },
       typescript = { "prettier" },
       javascriptreact = { "prettier" },
@@ -47,7 +50,7 @@ return {
       graphql = { "prettier" },
       liquid = { "prettier" },
       -- lua = { "stylua" },
-      -- python = { "isort", "black" }, --list formetter in order to which one use firsttrees
+      python = { "isort", "black" }, --list formetter in order to which one use firsttrees
     },
     -- ../lsp/linting.lua
     lint = {
