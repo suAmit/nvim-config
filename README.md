@@ -1,9 +1,18 @@
 # NVIM Config
 
-Requirement
+### Requirements
 
 ```bash
-npm clang ripgrep make fzf
+npm
+clang
+ripgrep
+make
+fzf
 ```
 
-Install [**JetBrainsMono Nerd Font**](https://www.jetbrains.com/lp/mono/)
+### Fonts
+
+Add:
+
+- **JetBrainsMono Nerd Font**
+- **FiraCode Nerd Font**
